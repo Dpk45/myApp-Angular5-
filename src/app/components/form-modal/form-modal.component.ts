@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
-import {UsersService} from "../services/users.service"
+import {UsersService} from '../../services/users.service';
 
 @Component({
   selector: 'app-form-modal',

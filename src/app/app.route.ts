@@ -1,13 +1,18 @@
-import { ModuleWithProviders } from "@angular/core";
+import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppHomeComponent } from './app-home/app-home.component'
+import { AppHomeComponent } from './components/app-home/app-home.component';
+import { MyPostComponentComponent } from './components/my-post-component/my-post-component.component'; 
 
 const appRoutes: Routes =
     [
         {
-            path: "",
+            path: '',
             component: AppHomeComponent
+        },
+        {
+            path: 'myPosts',
+            component: MyPostComponentComponent
         }
     ];
 

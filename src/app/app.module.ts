@@ -1,25 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { routing, appRoutingProviders } from "./app.route"
+import { routing, appRoutingProviders } from './app.route';
 // import { HttpModule } from '@angular/http';
 // import { HttpClientModule } from '@angular/common/http';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from './../environments/environment';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AppNavbarComponent } from './app-navbar/app-navbar.component';
-import { AppHomeComponent } from './app-home/app-home.component';
-import { FormModalComponent } from './form-modal/form-modal.component';
+import { AppNavbarComponent } from './components/app-navbar/app-navbar.component';
+import { AppHomeComponent } from './components/app-home/app-home.component';
+import { FormModalComponent } from './components/form-modal/form-modal.component';
 
-import {UsersService} from "./services/users.service";
+import {UsersService} from './services/users.service';
 
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { MyPostComponentComponent } from './components/my-post-component/my-post-component.component'; 
 
 
 @NgModule({
@@ -27,14 +26,13 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     AppNavbarComponent,
     AppHomeComponent,
-    FormModalComponent
+    FormModalComponent,
+    MyPostComponentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
     NgbModule.forRoot(),
     // HttpModule,
     HttpClientModule,
