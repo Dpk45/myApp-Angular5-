@@ -11,12 +11,17 @@ import {UsersService} from '../../services/users.service';
 })
 export class FormModalComponent implements OnInit {
 
+  isLoginPage: boolean = false;
+  
+
   constructor(public activeModal: NgbActiveModal,  private formBuilder: FormBuilder, private _userService: UsersService) { 
    this.createForm();
 }
 
   @Input() id: number;
   signUp: FormGroup;
+  login: FormGroup;
+  
 
   ngOnInit() {
   	console.log("id >>>>", this.id)
@@ -30,14 +35,14 @@ export class FormModalComponent implements OnInit {
   	this.signUp = this.formBuilder.group({
   		firstName: '',
   		lastName: '',
-		userName: '',
-		password: '',
-		dob:'',
-		email:''
+  		userName: '',
+  		password: '',
+  		dob:'',
+  		email:''
   	})
   }
 
-  private submitForm() {
+  private submitSignUpForm() {
   	console.log("this.signUp.value) >>>>>>>>", this.signUp.value);
   	this._userService.createUser(this.signUp.value).subscribe((data:any) => {
   		if(data){
@@ -49,6 +54,18 @@ export class FormModalComponent implements OnInit {
          console.error("Error saving user!", error);
          // return Observable.throw(error);
        })
+  }
+
+  private loginModal(){
+    this.isLoginPage = true;
+    this.login = this.formBuilder.group({
+      email:'',
+      password: ''
+    });
+  }
+
+  private submitLoginForm(){
+    console.log("this.login.value) >>>>>>>>", this.login.value);
   }
 
 }
