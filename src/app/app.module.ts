@@ -14,11 +14,15 @@ import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './components/app-navbar/app-navbar.component';
 import { AppHomeComponent } from './components/app-home/app-home.component';
 import { FormModalComponent } from './components/form-modal/form-modal.component';
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import {UsersService} from './services/users.service';
 
 import { HttpClientModule } from '@angular/common/http';
-import { MyPostComponentComponent } from './components/my-post-component/my-post-component.component'; 
+import { MyPostComponentComponent } from './components/my-post-component/my-post-component.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { FooterComponent } from './components/footer/footer.component'; 
 
 
 @NgModule({
@@ -27,13 +31,17 @@ import { MyPostComponentComponent } from './components/my-post-component/my-post
     AppNavbarComponent,
     AppHomeComponent,
     FormModalComponent,
-    MyPostComponentComponent
+    MyPostComponentComponent,
+    FileSelectDirective,
+    GalleryComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     NgbModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
     // HttpModule,
     HttpClientModule,
     routing

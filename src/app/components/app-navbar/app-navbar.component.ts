@@ -9,10 +9,12 @@ import { FormModalComponent } from '../form-modal/form-modal.component';
   styleUrls: ['./app-navbar.component.css']
 })
 export class AppNavbarComponent implements OnInit {
+	logo: any;
 
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
+		this.logo = 'assets/images/d_logo.gif';
   }
 
     openFormModal() {

@@ -1,29 +1,67 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-  <a class="navbar-brand" routerLink = "">My-App</a>
+  <!-- <div class="navbar-brand">
+    <a class="navbar-item" routerLink = "">
+        <img [src]="logo" style="width: 35px" alt = "logo image">
+    </a>
+  </div> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink = "">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink = "">Home </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" routerLink = "/myPosts">MyPosts</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink = "/gallery">Image Gallery</a>
       </li>
-      <!-- <li class="nav-item dropdown" ngbDropdown>
+      <li class="nav-item dropdown" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>Category</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
           <a class="dropdown-item" href="#">Angular</a>
           <a class="dropdown-item" href="#">React</a>
           <a class="dropdown-item" href="#">Vue.js</a>
 		    </div>
-      </li> -->
+      </li>
     </ul>
-   <!--  <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
-    <button type="button" class="btn btn-primary" (click)="openFormModal()">SignIn/SignUp</button>
+    <!-- <a class="nav-item"  (click)="openFormModal()" style="cursor: pointer;">SignIn/SignUp</a> -->
+    <button type="button" class="btn btn-primary buttnClr" (click)="openFormModal()">SignIn/SignUp</button>
   </div>
 </nav>
+
+<!-- <nav class = "navbar navbar-inverse fixed-top">
+  <div class = "container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">MyAppLogo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink = "">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" routerLink = "/myPosts">MyPosts</a>
+        </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>Category</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
+            <a class="dropdown-item" href="#">Angular</a>
+            <a class="dropdown-item" href="#">React</a>
+            <a class="dropdown-item" href="#">Vue.js</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-rigth">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> -->

@@ -1,0 +1,5 @@
+.bgHomneImage{
+    height:40em; background-size:cover; width:auto;
+    background-image:url('/assets/images/cam1.jpg');
+    background-position:50% 50%; 
+  }

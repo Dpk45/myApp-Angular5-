@@ -14,12 +14,16 @@ export class UsersService {
 
 	 // Uses http.get() to load data from a single API endpoint
     getUsers() {
-        return this.http.get('http://localhost:3000/1.0/allUsers');
+        return this.http.get('http://localhost:8000/api/1.0/allUsers');
     }
 
     createUser(data: any){console.log("in create user service fe..")
-    	return this.http.post('http://localhost:8000/1.0/user', data, httpOptions).map((res: any) => {
+    	return this.http.post('http://localhost:8000/api/1.0/user', data, httpOptions).map((res: any) => {
                 return res;
             });
+    }
+    
+    getUserByName(){
+        return this.http.get('http://localhost:8000/api/1.0/allUsers');
     }
 }
