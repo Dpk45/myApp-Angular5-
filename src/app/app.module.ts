@@ -20,7 +20,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {UsersService} from './services/users.service';
 
 import { HttpClientModule } from '@angular/common/http';
-import { MyPostComponentComponent } from './components/my-post-component/my-post-component.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component'; 
 
@@ -31,16 +30,15 @@ import { FooterComponent } from './components/footer/footer.component';
     AppNavbarComponent,
     AppHomeComponent,
     FormModalComponent,
-    MyPostComponentComponent,
     FileSelectDirective,
     GalleryComponent,
     FooterComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule.forRoot(),
     MDBBootstrapModule.forRoot(),
     // HttpModule,
     HttpClientModule,

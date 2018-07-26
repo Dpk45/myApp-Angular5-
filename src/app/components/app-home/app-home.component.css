@@ -1,5 +1,62 @@
 .bgHomneImage{
-    height:40em; background-size:cover; width:auto;
     background-image:url('/assets/images/cam1.jpg');
-    background-position:50% 50%; 
+    height:40em; 
+    max-width: 100%;
+    margin-top: 75px; 
+    background-size:cover;
+    background-position:50% 50%;
+    position: relative;
+    background-repeat: no-repeat; 
   }
+
+.homeText{
+	/*margin-top: 100px;*/
+	position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+/* Place text in the middle of the image */
+.homeText{
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-style: italic;
+    font-family: handwriting;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    /*height: 300px;  Should be removed. Only for demonstration */
+}
+
+.homeSecondImg{
+	background-image:url('/assets/images/Picture-1.png');
+	height:30em; 
+    max-width: 100%;
+    background-size:cover;
+    background-position:50% 50%;
+    position: relative;
+    background-repeat: no-repeat;
+    -webkit-filter: brightness(50%); /* Safari 6.0 - 9.0 */
+    filter: brightness(50%); 
+}
+
+.pTxt{
+	font-size: 26px;
+	font-weight: bold;
+}

@@ -18,13 +18,17 @@
       <li class="nav-item">
         <a class="nav-link" routerLink = "/gallery">Image Gallery</a>
       </li>
-      <li class="nav-item dropdown" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>Category</a>
+      <li class="nav-item">
+      <div class="d-inline-block" ngbDropdown>
+        <a class="nav-link" id="dropdown01" ngbDropdownToggle>Category</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
-          <a class="dropdown-item" href="#">Angular</a>
-          <a class="dropdown-item" href="#">React</a>
-          <a class="dropdown-item" href="#">Vue.js</a>
+          <a class="dropdown-item" href="#">Landsacape</a>
+          <a class="dropdown-item" href="#">Portrait</a>
 		    </div>
+      </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">About</a>
       </li>
     </ul>
     <!-- <a class="nav-item"  (click)="openFormModal()" style="cursor: pointer;">SignIn/SignUp</a> -->
