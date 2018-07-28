@@ -21,7 +21,8 @@ import {UsersService} from './services/users.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { FooterComponent } from './components/footer/footer.component'; 
+import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './components/about/about.component'; 
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FormModalComponent,
     FileSelectDirective,
     GalleryComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     NgbModule.forRoot(),
