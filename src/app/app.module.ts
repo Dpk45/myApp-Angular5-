@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { routing, appRoutingProviders } from './app.route';
 // import { HttpModule } from '@angular/http';
 // import { HttpClientModule } from '@angular/common/http';
-
+import { AuthGuard } from './_guards/auth.guard';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { environment } from './../environments/environment';
@@ -47,6 +47,7 @@ import { AboutComponent } from './components/about/about.component';
     routing
   ],
   providers: [
+    AuthGuard,
     appRoutingProviders, UsersService
   ],
   bootstrap: [AppComponent],

@@ -1,6 +1,8 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AuthGuard } from './_guards/auth.guard';
+
 import { AppHomeComponent } from './components/app-home/app-home.component';
 import { GalleryComponent } from './components/gallery/gallery.component'; 
 import { AboutComponent } from './components/about/about.component'; 
@@ -13,11 +15,13 @@ const appRoutes: Routes =
         },
         {
             path: 'gallery',
-            component: GalleryComponent
+            component: GalleryComponent,
+            canActivate: [AuthGuard]
         },
         {
             path: 'about',
-            component: AboutComponent
+            component: AboutComponent,
+            canActivate: [AuthGuard]
         }
     ];
 
