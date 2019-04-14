@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './components/app-navbar/app-navbar.component';
 import { AppHomeComponent } from './components/app-home/app-home.component';
 import { FormModalComponent } from './components/form-modal/form-modal.component';
-import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+// import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import {UsersService} from './services/users.service';
@@ -31,7 +31,7 @@ import { AboutComponent } from './components/about/about.component';
     AppNavbarComponent,
     AppHomeComponent,
     FormModalComponent,
-    FileSelectDirective,
+    // FileSelectDirective,
     GalleryComponent,
     FooterComponent,
     AboutComponent
